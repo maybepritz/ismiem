@@ -68,77 +68,32 @@ bun dev
 
 Приложение будет доступно по адресу: **http://localhost:8080**
 
----
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-## Доступные скрипты
+**Use GitHub Codespaces**
 
-| Команда | Описание |
-|---------|----------|
-| `npm run dev` | Запуск сервера разработки |
-| `npm run build` | Сборка для продакшена |
-| `npm run build:dev` | Сборка в режиме разработки |
-| `npm run preview` | Предпросмотр продакшен-сборки |
-| `npm run lint` | Проверка кода с помощью ESLint |
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
----
+## What technologies are used for this project?
 
-## Структура проекта
+This project is built with .
 
-```
-src/
-├── components/
-│   ├── common/          # Переиспользуемые компоненты
-│   │   ├── AnnouncementCard.tsx
-│   │   ├── ContactForm.tsx
-│   │   ├── FAQSection.tsx
-│   │   ├── FeatureCard.tsx
-│   │   ├── LeaderCard.tsx
-│   │   ├── PageHero.tsx
-│   │   ├── PhotoGallery.tsx
-│   │   ├── SeminarCard.tsx
-│   │   ├── StatsBar.tsx
-│   │   └── ...
-│   ├── layout/          # Компоненты макета
-│   │   ├── Footer.tsx
-│   │   └── Navbar.tsx
-│   └── ui/              # UI компоненты (shadcn/ui)
-├── hooks/               # Кастомные хуки
-├── lib/                 # Утилиты и константы
-├── pages/               # Страницы приложения
-│   ├── About.tsx
-│   ├── Announcements.tsx
-│   ├── Archive.tsx
-│   ├── Committees.tsx
-│   ├── Contact.tsx
-│   ├── Index.tsx
-│   ├── Mission.tsx
-│   └── leaders/         # Страницы руководителей
-└── App.tsx              # Корневой компонент
-```
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
----
+## How can I deploy this project?
 
-## Маршрутизация
+Simply open [Lovable](https://lovable.dev/projects/67830d17-09a8-4ee7-ab17-c298837b2eaa) and click on Share -> Publish.
 
-| Путь | Страница |
-|------|----------|
-| `/` | Главная страница |
-| `/about` | О семинаре |
-| `/mission` | Миссия |
-| `/committees` | Руководители |
-| `/archive` | Архив |
-| `/announcements` | Объявления |
-| `/contact` | Контакты |
-| `/leaders/:name` | Страницы руководителей |
+## I want to use a custom domain - is that possible?
 
----
-
-## UI Компоненты
-
-Проект использует [shadcn/ui](https://ui.shadcn.com/) — коллекцию переиспользуемых компонентов на основе Radix UI и Tailwind CSS.
-
-Для добавления новых компонентов:
-
-```bash
-npx shadcn-ui@latest add [component-name]
-```
+We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
