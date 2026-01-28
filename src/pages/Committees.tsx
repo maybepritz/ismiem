@@ -12,6 +12,9 @@ const Committees = () => {
       sessions: "Председательствовал на заседаниях №№ 1–40",
       photo: "/committees/Mordkovich.png",
       link: "/leaders/mordkovich",
+      button:"Руководитель о себе",
+       objectPosition: "top",
+      scale: 1,
     },
     {
       name: "Александр Васильевич Ястребов",
@@ -20,6 +23,9 @@ const Committees = () => {
       sessions: "Председательствовал на заседаниях №№ 41–44",
       photo: "/committees/Yastrebov.jpg",
       link: "/leaders/yastrebov",
+      button:"Руководитель о себе",
+       objectPosition: "center 25%",
+    scale: 1,
     },
     {
       name: "Юрий Александрович Дробышев",
@@ -29,6 +35,9 @@ const Committees = () => {
       sessions: "Председательствовал на заседании № 42",
       photo: "/committees/Drobyishev.jpg",
       link: "/leaders/drobyshev",
+      button:"О руководителе",
+       objectPosition: "top",
+    scale: 1,
     },
     {
       name: "Ирина Евгеньевна Малова",
@@ -37,6 +46,9 @@ const Committees = () => {
       sessions: "Председательствовала на заседаниях №№ 43–44",
       photo: "/committees/Malova.jpg",
       link: "/leaders/malova",
+      button:"Руководитель о себе",
+       objectPosition: "top",
+    scale: 1,
     },
   ];
 
@@ -52,7 +64,7 @@ const Committees = () => {
 
         <Card className="p-6 mb-12 border border-gray-200 shadow-sm">
           <p className="text-gray-700 leading-relaxed">
-            Познакомьтесь с руководителями Международного семинара по математическому и информационному образованию А. Г. Мордковича.
+            Познакомьтесь с руководителями Международного семинара по математическому и информационному образованию <span className=" whitespace-nowrap">А. Г. Мордковича</span>
           </p>
         </Card>
 
@@ -67,7 +79,12 @@ const Committees = () => {
                   <img
                     src={leader.photo}
                     alt={leader.name}
-                    className="w-full h-full object-cover object-top"
+                    
+                    className="w-full h-full object-cover"
+                    style={{
+      objectPosition: leader.objectPosition || "center",
+      transform: `scale(${leader.scale || 1})`,
+    }}
                   />
                 </div>
 
@@ -90,7 +107,7 @@ const Committees = () => {
                 {leader.link && (
                   <Link to={leader.link}>
                     <Button variant="outline" size="sm" className="mt-2">
-                      Руководитель о себе
+                      {leader.button}
                       <ExternalLink className="w-3 h-3 ml-2" />
                     </Button>
                   </Link>

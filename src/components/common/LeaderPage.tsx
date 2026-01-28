@@ -206,7 +206,7 @@ const LeaderPage = ({ leader }: LeaderPageProps) => {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-gray-900">
-                Достижения и вклад
+                Этапы карьеры и достижения
               </h2>
             </div>
           </div>
@@ -232,7 +232,7 @@ const LeaderPage = ({ leader }: LeaderPageProps) => {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-gray-900">
-                Избранные публикации
+                Педагогический опыт
               </h2>
             </div>
           </div>
