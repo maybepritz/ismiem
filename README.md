@@ -1,69 +1,144 @@
-# Welcome to your Lovable project
+# ISMIEM — Международный семинар по математическому и информационному образованию им. А.Г. Мордковича
 
-## Project info
+<div align="center">
+  <img src="public/logo.jpeg" alt="ISMIEM Logo" width="200"/>
+  
+  **International Seminar on Mathematics and Informatics Education by Mordkovich**
+  
+  [![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+</div>
 
-**URL**: https://lovable.dev/projects/67830d17-09a8-4ee7-ab17-c298837b2eaa
+---
 
-## How can I edit this code?
+## 📋 О проекте
 
-There are several ways of editing your application.
+Официальный веб-сайт **Международного семинара по математическому и информационному образованию им. А.Г. Мордковича (ISMIEM)** — ежегодного научного мероприятия, объединяющего преподавателей, исследователей и специалистов в области математического образования с **1987 года**.
 
-**Use Lovable**
+### Основные разделы сайта:
+- **О семинаре** — история, цели и задачи
+- **Миссия** — ценности и направления деятельности
+- **Руководители** — информация о научных руководителях
+- **Архив** — материалы прошедших семинаров
+- **Объявления** — новости и предстоящие события
+- **Контакты** — форма обратной связи
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/67830d17-09a8-4ee7-ab17-c298837b2eaa) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Технологии
 
-**Use your preferred IDE**
+| Категория | Технологии |
+|-----------|------------|
+| **Frontend** | React 18, TypeScript |
+| **Сборка** | Vite |
+| **Стилизация** | Tailwind CSS, shadcn/ui |
+| **Роутинг** | React Router DOM |
+| **Управление состоянием** | TanStack React Query |
+| **UI компоненты** | Radix UI |
+| **Иконки** | Lucide React |
+| **Формы** | React Hook Form + Zod |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Быстрый старт
 
-Follow these steps:
+### Требования
+- [Node.js](https://nodejs.org/) версии 18+ 
+- [npm](https://www.npmjs.com/) или [bun](https://bun.sh/)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Установка и запуск
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Клонирование репозитория
+git clone https://github.com/maybepritz/ismiem.git
+cd ismiem
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Установка зависимостей
+npm install
+# или
+bun install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Запуск в режиме разработки
 npm run dev
+# или
+bun dev
 ```
 
-**Edit a file directly in GitHub**
+Приложение будет доступно по адресу: **http://localhost:8080**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## Доступные скрипты
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+| Команда | Описание |
+|---------|----------|
+| `npm run dev` | Запуск сервера разработки |
+| `npm run build` | Сборка для продакшена |
+| `npm run build:dev` | Сборка в режиме разработки |
+| `npm run preview` | Предпросмотр продакшен-сборки |
+| `npm run lint` | Проверка кода с помощью ESLint |
 
-## What technologies are used for this project?
+---
 
-This project is built with .
+## Структура проекта
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── components/
+│   ├── common/          # Переиспользуемые компоненты
+│   │   ├── AnnouncementCard.tsx
+│   │   ├── ContactForm.tsx
+│   │   ├── FAQSection.tsx
+│   │   ├── FeatureCard.tsx
+│   │   ├── LeaderCard.tsx
+│   │   ├── PageHero.tsx
+│   │   ├── PhotoGallery.tsx
+│   │   ├── SeminarCard.tsx
+│   │   ├── StatsBar.tsx
+│   │   └── ...
+│   ├── layout/          # Компоненты макета
+│   │   ├── Footer.tsx
+│   │   └── Navbar.tsx
+│   └── ui/              # UI компоненты (shadcn/ui)
+├── hooks/               # Кастомные хуки
+├── lib/                 # Утилиты и константы
+├── pages/               # Страницы приложения
+│   ├── About.tsx
+│   ├── Announcements.tsx
+│   ├── Archive.tsx
+│   ├── Committees.tsx
+│   ├── Contact.tsx
+│   ├── Index.tsx
+│   ├── Mission.tsx
+│   └── leaders/         # Страницы руководителей
+└── App.tsx              # Корневой компонент
+```
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/67830d17-09a8-4ee7-ab17-c298837b2eaa) and click on Share -> Publish.
+## Маршрутизация
 
-## I want to use a custom domain - is that possible?
+| Путь | Страница |
+|------|----------|
+| `/` | Главная страница |
+| `/about` | О семинаре |
+| `/mission` | Миссия |
+| `/committees` | Руководители |
+| `/archive` | Архив |
+| `/announcements` | Объявления |
+| `/contact` | Контакты |
+| `/leaders/:name` | Страницы руководителей |
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+---
+
+## UI Компоненты
+
+Проект использует [shadcn/ui](https://ui.shadcn.com/) — коллекцию переиспользуемых компонентов на основе Radix UI и Tailwind CSS.
+
+Для добавления новых компонентов:
+
+```bash
+npx shadcn-ui@latest add [component-name]
+```
