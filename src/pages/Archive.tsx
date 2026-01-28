@@ -58,7 +58,7 @@ const Archive = () => {
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <PageHero
                     title="Архив семинаров"
-                    description={`История семинара с 1987 года — ${seminars.length} заседаний в ${new Set(seminars.map(s => s.city)).size} городах`}
+                    description={`История семинара с 1987 года — ${seminars.length} заседания в ${new Set(seminars.map(s => s.city)).size} городах`}
                 />
 
                 <div className="space-y-4">
@@ -66,7 +66,14 @@ const Archive = () => {
                         title="Полная коллекция материалов"
                     >
                         <p className="text-gray-700 mb-4">
-                            Все материалы семинаров размещены в каталоге на портале:
+                            Все материалы семинаров размещены в каталоге на портале:  <a
+                                href="https://mathedu.ru"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 underline hover:text-blue-800"
+                            >
+                                mathedu.ru
+                            </a>
                         </p>
                         <a
                             href="https://www.mathedu.ru/catalogue/collections/groups/#materialy_seminara_prepodavateley_matematiki_vuzov"
