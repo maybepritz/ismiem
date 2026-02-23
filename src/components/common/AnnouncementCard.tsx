@@ -138,6 +138,7 @@ export interface UpcomingEventData {
   location: string;
   status: string;
   description: string;
+  link?: string;
 }
 
 interface UpcomingEventCardProps {
@@ -187,7 +188,20 @@ export const UpcomingEventCard = ({ event, action }: UpcomingEventCardProps) => 
               {event.location}
             </span>
           </div>
-          <p className="text-gray-600">{event.description}</p>
+          <p className="text-gray-600 mb-4">{event.description}</p>
+          <div className="flex flex-wrap gap-3">
+            {event.link && (
+              <a
+                href={event.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-blue-50 hover:bg-blue-100 text-blue-700 px-4 py-2 rounded-lg transition-colors border border-blue-200 text-sm font-medium"
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Подать заявку
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </Card>

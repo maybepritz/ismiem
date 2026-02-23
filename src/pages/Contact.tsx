@@ -1,8 +1,9 @@
 import { Card } from "@/components/ui/card";
-import { Users, Mail, Globe, BookOpen, Calendar, MapPin, Archive, Bell, ArrowRight } from "lucide-react";
+import { Users, Mail, Globe, BookOpen, Calendar, MapPin, Archive, Bell, ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { PageHero } from "@/components/common";
+import ApplicationButton from "@/components/common/ApplicationButton";
 
 const Contact = () => {
     const leaders = [
@@ -41,7 +42,8 @@ const Contact = () => {
         city: "Самара",
         theme: "Цифровая трансформация образования: развитие традиций и новые возможности в обучении математике и информатике",
         date: "1–3 октября 2026 года",
-        status: "Планируется"
+        status: "Планируется",
+        link: "https://scideck.ru/ismiem2026"
     };
 
     const quickLinks = [
@@ -124,9 +126,18 @@ const Contact = () => {
                                     </p>
                                 </div>
                             </div>
-                            <p className="text-gray-700 text-sm">
+                            <p className="text-gray-700 text-sm mb-4">
                                 <strong>Тема:</strong> «{nextSeminar.theme}»
                             </p>
+                            <a
+                                href={nextSeminar.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center bg-blue-50 hover:bg-blue-100 text-blue-700 px-4 py-2 rounded-lg transition-colors border border-blue-200 text-sm font-medium"
+                            >
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                Подать заявку
+                            </a>
                         </Card>
 
                         <Card className="p-8 border border-gray-200 shadow-sm">
@@ -139,7 +150,7 @@ const Contact = () => {
                                     <p className="text-gray-600">Свяжитесь с организаторами семинара</p>
                                 </div>
                             </div>
-                            
+
                             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
                                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                     <Mail className="w-8 h-8 text-blue-600" />
@@ -147,7 +158,7 @@ const Contact = () => {
                                 <p className="text-gray-700 mb-4">
                                     Для связи с организаторами семинара напишите на электронную почту:
                                 </p>
-                                <a 
+                                <a
                                     href={`mailto:${contactEmail}`}
                                     className="text-2xl md:text-3xl font-bold text-blue-600 hover:text-blue-800 transition-colors block mb-2"
                                 >

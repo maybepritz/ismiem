@@ -54,17 +54,30 @@ const Index = () => {
       <div className="pt-20 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-                ISMIEM
-              </h1>
-              <p className="text-lg md:text-xl text-gray-600 font-semibold mb-6">
-                Международный семинар по математическому и информационному образованию
-                <span className="text-blue-600 mx-2 whitespace-nowrap">А. Г. Мордковича</span>
-              </p>
-              <p className="text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
-                Ежегодный международный семинар, объединяющий преподавателей, исследователей и специалистов в области математического и информационного образования с 1987 года.
-              </p>
+            <div className="w-full flex flex-col">
+              <div className="text-center lg:text-left">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
+                  ISMIEM
+                </h1>
+                <p className="text-lg md:text-xl text-gray-600 font-semibold mb-6">
+                  Международный семинар по математическому и информационному образованию
+                  <span className="text-blue-600 mx-2 whitespace-nowrap">А. Г. Мордковича</span>
+                </p>
+                <p className="text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
+                  Ежегодный международный семинар, объединяющий преподавателей, исследователей и специалистов в области математического и информационного образования с 1987 года.
+                </p>
+
+              </div>
+              <a
+                href="https://scideck.ru/ismiem2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-center lg:self-start w-full max-w-xs"
+              >
+                <Button className="w-full">
+                  Подать заявку
+                </Button>
+              </a>
             </div>
 
             <div className="relative max-w-[280px] mx-auto lg:max-w-md">

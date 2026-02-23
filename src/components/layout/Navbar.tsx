@@ -33,6 +33,8 @@ const Navbar = () => {
     { name: "Обратная связь", path: "/contact" },
   ];
 
+  const applicationUrl = "https://scideck.ru/ismiem2026";
+
   return (
     <nav className="fixed w-full bg-brand z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,6 +60,7 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            {/* Кнопка подачи заявки удалена по просьбе пользователя */}
           </div>
 
           {/* Mobile menu button */}
@@ -102,6 +105,7 @@ const Navbar = () => {
                 <ChevronRight className="w-5 h-5 text-gray-400" />
               </Link>
             ))}
+            {/* Кнопка подачи заявки удалена по просьбе пользователя */}
           </div>
           
           {/* Footer в мобильном меню */}

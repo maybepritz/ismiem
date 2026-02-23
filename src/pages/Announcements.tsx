@@ -44,6 +44,7 @@ const Announcements = () => {
       location: "Самара",
       status: "Планируется",
       description: "«Цифровая трансформация образования: развитие традиций и новые возможности в обучении математике и информатике»",
+      link: "https://www.mathedu.ru/events/45-seminar-2026/",
     },
   ];
 
